@@ -1,22 +1,36 @@
 import java.util.*;
 
-public class lowestAncestor {
+class Node {
+	int value;
+	Node right, left;
 
-	public static Node root;
+	public Node(int val) {
+		value = val;
+		right = null;
+		left = null;
+	}
+
+}
+
+public class lowestAncestor {
+	Node root;
 	public static String toPrint = "";
 
 	public static void main(String[] Args) {
 		try {
+			lowestAncestor lowest = new lowestAncestor();
 			System.out.println("Enter Node values you would like to add (seperated by spaces)");
 			Scanner sc = new Scanner(System.in);
 			String values = sc.nextLine();
 			String[] split = values.split(" ");
-			root = new Node(Integer.valueOf(split[0]));
+			lowest.root = new Node(Integer.valueOf(split[0]));
+
 			for (int i = 1; i < split.length; i++) {
-				insert(root, Integer.valueOf(split[i]));
+
+				insert(lowest.root, Integer.valueOf(split[i]));
 			}
 			System.out.println("Your tree is;");
-			System.out.println(prettyPrint(root, ""));
+			System.out.println(prettyPrint(lowest.root, ""));
 
 			System.out.println("");
 			System.out.println("Enter the two nodes you want to find the common ancestor of (seperated by spaces)");
@@ -24,7 +38,8 @@ public class lowestAncestor {
 			String[] splitter = anNode.split(" ");
 			int firstNode = Integer.valueOf(splitter[0]);
 			int secondNode = Integer.valueOf(splitter[1]);
-			int ancestor = findCommonAncestor(root, firstNode, secondNode);
+			int ancestor = findCommonAncestor(lowest.root, firstNode, secondNode);
+
 			System.out.println("Common ancestor of " + firstNode + " and " + secondNode + " is " + ancestor);
 
 		}
@@ -45,6 +60,7 @@ public class lowestAncestor {
 			if (node.right != null) {
 				insert(node.right, value);
 			} else {
+
 				node.right = new Node(value);
 			}
 		}
@@ -69,6 +85,7 @@ public class lowestAncestor {
 	}
 
 	public static int findCommonAncestor(Node root, int n1, int n2) {
+
 		if (root == null)
 			return 0;
 		if (root.value > n1 && root.value > n2)
