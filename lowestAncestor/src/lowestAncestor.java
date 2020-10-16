@@ -13,10 +13,10 @@ class Node {
 }
 
 public class lowestAncestor {
-	Node root;
+	 Node root;
 	public static String toPrint = "";
 
-	public static void main(String[] Args) {
+	public void main(String[] Args) {
 		try {
 			lowestAncestor lowest = new lowestAncestor();
 			System.out.println("Enter Node values you would like to add (seperated by spaces)");
@@ -49,8 +49,11 @@ public class lowestAncestor {
 		}
 	}
 
-	public static void insert(Node node, int value) {
-		if (value < node.value) {
+	public void insert(Node node, int value) {
+		if (root==null){
+			root = new Node(value);
+		}
+		else if (value < node.value) {
 			if (node.left != null) {
 				insert(node.left, value);
 			} else {
@@ -66,7 +69,7 @@ public class lowestAncestor {
 		}
 	}
 
-	public static String prettyPrint(Node node, String prefix) {
+	public String prettyPrint(Node node, String prefix) {
 
 		if (node == null) {
 			toPrint = toPrint + prefix + "-null\n";
@@ -84,7 +87,7 @@ public class lowestAncestor {
 		return toPrint;
 	}
 
-	public static int findCommonAncestor(Node root, int n1, int n2) {
+	public int findCommonAncestor(Node root, int n1, int n2) {
 
 		if (root == null)
 			return 0;
