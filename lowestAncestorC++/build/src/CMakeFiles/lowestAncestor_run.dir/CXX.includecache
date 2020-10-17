@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/src/Node.cpp
+Node.h
+C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/src/Node.h
+
+C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/src/Node.h
+iostream
+-
+vector
+-
+cstdlib
+-
+
+C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/src/lowestAncestor.cpp
+Node.h
+C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/src/Node.h
+
