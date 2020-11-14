@@ -75,17 +75,6 @@ CMAKE_BINARY_DIR = C:/Users/jason/workspace/Software-Engineering/lowestAncestorC
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	"C:/Program Files/CMake/bin/cmake-gui.exe" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -96,6 +85,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	"C:/Program Files/CMake/bin/cmake-gui.exe" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -130,19 +130,46 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-tst/CMakeFiles/lowestAncestor_tst.dir/rule:
-	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tst/CMakeFiles/lowestAncestor_tst.dir/rule
-.PHONY : tst/CMakeFiles/lowestAncestor_tst.dir/rule
+tst/CMakeFiles/LCADAG_tst.dir/rule:
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tst/CMakeFiles/LCADAG_tst.dir/rule
+.PHONY : tst/CMakeFiles/LCADAG_tst.dir/rule
 
 # Convenience name for target.
-lowestAncestor_tst: tst/CMakeFiles/lowestAncestor_tst.dir/rule
+LCADAG_tst: tst/CMakeFiles/LCADAG_tst.dir/rule
 
-.PHONY : lowestAncestor_tst
+.PHONY : LCADAG_tst
 
 # fast build rule for target.
-lowestAncestor_tst/fast:
-	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/lowestAncestor_tst.dir/build.make tst/CMakeFiles/lowestAncestor_tst.dir/build
-.PHONY : lowestAncestor_tst/fast
+LCADAG_tst/fast:
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/LCADAG_tst.dir/build.make tst/CMakeFiles/LCADAG_tst.dir/build
+.PHONY : LCADAG_tst/fast
+
+LCADAG-Test.obj: LCADAG-Test.cpp.obj
+
+.PHONY : LCADAG-Test.obj
+
+# target to build an object file
+LCADAG-Test.cpp.obj:
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/LCADAG_tst.dir/build.make tst/CMakeFiles/LCADAG_tst.dir/LCADAG-Test.cpp.obj
+.PHONY : LCADAG-Test.cpp.obj
+
+LCADAG-Test.i: LCADAG-Test.cpp.i
+
+.PHONY : LCADAG-Test.i
+
+# target to preprocess a source file
+LCADAG-Test.cpp.i:
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/LCADAG_tst.dir/build.make tst/CMakeFiles/LCADAG_tst.dir/LCADAG-Test.cpp.i
+.PHONY : LCADAG-Test.cpp.i
+
+LCADAG-Test.s: LCADAG-Test.cpp.s
+
+.PHONY : LCADAG-Test.s
+
+# target to generate assembly for a file
+LCADAG-Test.cpp.s:
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/LCADAG_tst.dir/build.make tst/CMakeFiles/LCADAG_tst.dir/LCADAG-Test.cpp.s
+.PHONY : LCADAG-Test.cpp.s
 
 lowestAncestor-Test.obj: lowestAncestor-Test.cpp.obj
 
@@ -150,7 +177,7 @@ lowestAncestor-Test.obj: lowestAncestor-Test.cpp.obj
 
 # target to build an object file
 lowestAncestor-Test.cpp.obj:
-	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/lowestAncestor_tst.dir/build.make tst/CMakeFiles/lowestAncestor_tst.dir/lowestAncestor-Test.cpp.obj
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/LCADAG_tst.dir/build.make tst/CMakeFiles/LCADAG_tst.dir/lowestAncestor-Test.cpp.obj
 .PHONY : lowestAncestor-Test.cpp.obj
 
 lowestAncestor-Test.i: lowestAncestor-Test.cpp.i
@@ -159,7 +186,7 @@ lowestAncestor-Test.i: lowestAncestor-Test.cpp.i
 
 # target to preprocess a source file
 lowestAncestor-Test.cpp.i:
-	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/lowestAncestor_tst.dir/build.make tst/CMakeFiles/lowestAncestor_tst.dir/lowestAncestor-Test.cpp.i
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/LCADAG_tst.dir/build.make tst/CMakeFiles/LCADAG_tst.dir/lowestAncestor-Test.cpp.i
 .PHONY : lowestAncestor-Test.cpp.i
 
 lowestAncestor-Test.s: lowestAncestor-Test.cpp.s
@@ -168,7 +195,7 @@ lowestAncestor-Test.s: lowestAncestor-Test.cpp.s
 
 # target to generate assembly for a file
 lowestAncestor-Test.cpp.s:
-	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/lowestAncestor_tst.dir/build.make tst/CMakeFiles/lowestAncestor_tst.dir/lowestAncestor-Test.cpp.s
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/LCADAG_tst.dir/build.make tst/CMakeFiles/LCADAG_tst.dir/lowestAncestor-Test.cpp.s
 .PHONY : lowestAncestor-Test.cpp.s
 
 # Help Target
@@ -179,7 +206,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... lowestAncestor_tst"
+	@echo "... LCADAG_tst"
+	@echo "... LCADAG-Test.obj"
+	@echo "... LCADAG-Test.i"
+	@echo "... LCADAG-Test.s"
 	@echo "... lowestAncestor-Test.obj"
 	@echo "... lowestAncestor-Test.i"
 	@echo "... lowestAncestor-Test.s"

@@ -1,19 +1,13 @@
 import java.util.*;
 
-class NewNode {
-	int V, value;
 
-	public NewNode(int val, int v) {
-		V = v;
-		value = val;
-	}
-}
 
 public class LCADAG {
 
 	 int totalVertices, totalEdges;
-	 int[] indegree, outdegree;
+	 int[] indegree;
 	 boolean[] visited, cycle;
+	 boolean cycleExists;
 	 LinkedList<Integer> graph[];
 
 	public LCADAG(int v) {
@@ -25,9 +19,9 @@ public class LCADAG {
 			graph[i] = new LinkedList<Integer>();
 		}
 		indegree = new int[v];
-		outdegree = new int[v];
 		visited = new boolean[v];
 		cycle = new boolean[v];
+		cycleExists=false;
 	}
 
 
@@ -38,7 +32,7 @@ public class LCADAG {
 			this.indegree[node2]++;
 			return "Edge Added";
 		} else {
-			System.out.println("invalid vertex entered");
+			System.out.println("Invalid vertex entered");
 			return "Invalid vertex entered";
 		}
 	}
@@ -55,12 +49,13 @@ public class LCADAG {
 		this.visited[v] = true;
 		this.cycle[v] = true;
 		for (int i : this.graph[v]) {
-			if (this.visited[i]) {
-				checkCycle(i);
+			if (!this.visited[i]) {
+				this.checkCycle(i);
 
 			} else if (this.cycle[i]) {
-
+				cycleExists=true;
 				return true;
+
 			}
 		}
 		this.cycle[v] = false;
@@ -68,11 +63,11 @@ public class LCADAG {
 	}
 
 	public int findLCA(int v, int w) {
-
-		if (!checkCycle(0)) 
+		this.checkCycle(0);
+		if (this.cycleExists) 
 		{
 			return -1;
-		} else if (!isValidVertex(v)) {
+		} else if (!this.isValidVertex(v) || !this.isValidVertex(w)) {
 			
 			return -1;
 		}
@@ -85,6 +80,9 @@ public class LCADAG {
 
 		for (int i = 0; i < a1.size(); i++) {
 			for (int j = 0; j < a2.size(); j++) {
+				System.out.println("a1 is " + a1.get(i));
+				System.out.println("a2 is " + a2.get(j));
+
 				if (a1.get(i) == a2.get(j)) {
 					commonAncestors.add(a1.get(i));
 					found = true;
@@ -93,9 +91,10 @@ public class LCADAG {
 		}
 
 		if (found) {
-			
+			System.out.println("lca between " + v + " and " + w + " is " + commonAncestors.get(0));
 			return commonAncestors.get(0);
 		} else {
+			System.out.println("lca between " + v + " and " + w + " is -1");
 			return -1; 
 		}
 	}
@@ -115,6 +114,7 @@ public class LCADAG {
 		while (queue.size() != 0) {
 			s = queue.poll(); 
 			order.add(s);
+			System.out.println("queue size is " + order.size());
 
 			
 			Iterator<Integer> i = this.graph[s].listIterator();

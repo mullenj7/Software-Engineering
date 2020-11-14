@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/src/LCADAG.cpp
+LCADAG.h
+C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/src/LCADAG.h
+
+C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/src/LCADAG.h
+graph.h
+C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/src/graph.h
+
+C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/src/graph.h
+iostream
+-
+vector
+-
+cstdlib
+-
+string
+-
+list
+-
+

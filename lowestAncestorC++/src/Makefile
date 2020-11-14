@@ -1,2 +1,2 @@
 hello:	
-		g++ -o lowestAncestor lowestAncestor.cpp Node.cpp main.cpp
+		g++ -o LCADAG LCADAG.cpp graph.cpp main.cpp

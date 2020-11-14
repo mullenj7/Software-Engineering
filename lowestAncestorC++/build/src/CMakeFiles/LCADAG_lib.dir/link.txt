@@ -1,0 +1,2 @@
+C:/MinGW/bin/ar.exe qc libLCADAG_lib.a CMakeFiles/LCADAG_lib.dir/LCADAG.cpp.obj CMakeFiles/LCADAG_lib.dir/Node.cpp.obj CMakeFiles/LCADAG_lib.dir/graph.cpp.obj CMakeFiles/LCADAG_lib.dir/lowestAncestor.cpp.obj CMakeFiles/LCADAG_lib.dir/main.cpp.obj
+C:/MinGW/bin/ranlib.exe libLCADAG_lib.a

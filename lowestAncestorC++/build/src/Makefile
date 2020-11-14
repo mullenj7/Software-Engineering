@@ -130,34 +130,64 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-src/CMakeFiles/lowestAncestor_run.dir/rule:
-	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/lowestAncestor_run.dir/rule
-.PHONY : src/CMakeFiles/lowestAncestor_run.dir/rule
+src/CMakeFiles/LCADAG_run.dir/rule:
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/LCADAG_run.dir/rule
+.PHONY : src/CMakeFiles/LCADAG_run.dir/rule
 
 # Convenience name for target.
-lowestAncestor_run: src/CMakeFiles/lowestAncestor_run.dir/rule
+LCADAG_run: src/CMakeFiles/LCADAG_run.dir/rule
 
-.PHONY : lowestAncestor_run
+.PHONY : LCADAG_run
 
 # fast build rule for target.
-lowestAncestor_run/fast:
-	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lowestAncestor_run.dir/build.make src/CMakeFiles/lowestAncestor_run.dir/build
-.PHONY : lowestAncestor_run/fast
+LCADAG_run/fast:
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/LCADAG_run.dir/build.make src/CMakeFiles/LCADAG_run.dir/build
+.PHONY : LCADAG_run/fast
 
 # Convenience name for target.
-src/CMakeFiles/lowestAncestor_lib.dir/rule:
-	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/lowestAncestor_lib.dir/rule
-.PHONY : src/CMakeFiles/lowestAncestor_lib.dir/rule
+src/CMakeFiles/LCADAG_lib.dir/rule:
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/LCADAG_lib.dir/rule
+.PHONY : src/CMakeFiles/LCADAG_lib.dir/rule
 
 # Convenience name for target.
-lowestAncestor_lib: src/CMakeFiles/lowestAncestor_lib.dir/rule
+LCADAG_lib: src/CMakeFiles/LCADAG_lib.dir/rule
 
-.PHONY : lowestAncestor_lib
+.PHONY : LCADAG_lib
 
 # fast build rule for target.
-lowestAncestor_lib/fast:
-	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lowestAncestor_lib.dir/build.make src/CMakeFiles/lowestAncestor_lib.dir/build
-.PHONY : lowestAncestor_lib/fast
+LCADAG_lib/fast:
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/LCADAG_lib.dir/build.make src/CMakeFiles/LCADAG_lib.dir/build
+.PHONY : LCADAG_lib/fast
+
+LCADAG.obj: LCADAG.cpp.obj
+
+.PHONY : LCADAG.obj
+
+# target to build an object file
+LCADAG.cpp.obj:
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/LCADAG_run.dir/build.make src/CMakeFiles/LCADAG_run.dir/LCADAG.cpp.obj
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/LCADAG_lib.dir/build.make src/CMakeFiles/LCADAG_lib.dir/LCADAG.cpp.obj
+.PHONY : LCADAG.cpp.obj
+
+LCADAG.i: LCADAG.cpp.i
+
+.PHONY : LCADAG.i
+
+# target to preprocess a source file
+LCADAG.cpp.i:
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/LCADAG_run.dir/build.make src/CMakeFiles/LCADAG_run.dir/LCADAG.cpp.i
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/LCADAG_lib.dir/build.make src/CMakeFiles/LCADAG_lib.dir/LCADAG.cpp.i
+.PHONY : LCADAG.cpp.i
+
+LCADAG.s: LCADAG.cpp.s
+
+.PHONY : LCADAG.s
+
+# target to generate assembly for a file
+LCADAG.cpp.s:
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/LCADAG_run.dir/build.make src/CMakeFiles/LCADAG_run.dir/LCADAG.cpp.s
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/LCADAG_lib.dir/build.make src/CMakeFiles/LCADAG_lib.dir/LCADAG.cpp.s
+.PHONY : LCADAG.cpp.s
 
 Node.obj: Node.cpp.obj
 
@@ -165,8 +195,8 @@ Node.obj: Node.cpp.obj
 
 # target to build an object file
 Node.cpp.obj:
-	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lowestAncestor_run.dir/build.make src/CMakeFiles/lowestAncestor_run.dir/Node.cpp.obj
-	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lowestAncestor_lib.dir/build.make src/CMakeFiles/lowestAncestor_lib.dir/Node.cpp.obj
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/LCADAG_run.dir/build.make src/CMakeFiles/LCADAG_run.dir/Node.cpp.obj
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/LCADAG_lib.dir/build.make src/CMakeFiles/LCADAG_lib.dir/Node.cpp.obj
 .PHONY : Node.cpp.obj
 
 Node.i: Node.cpp.i
@@ -175,8 +205,8 @@ Node.i: Node.cpp.i
 
 # target to preprocess a source file
 Node.cpp.i:
-	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lowestAncestor_run.dir/build.make src/CMakeFiles/lowestAncestor_run.dir/Node.cpp.i
-	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lowestAncestor_lib.dir/build.make src/CMakeFiles/lowestAncestor_lib.dir/Node.cpp.i
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/LCADAG_run.dir/build.make src/CMakeFiles/LCADAG_run.dir/Node.cpp.i
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/LCADAG_lib.dir/build.make src/CMakeFiles/LCADAG_lib.dir/Node.cpp.i
 .PHONY : Node.cpp.i
 
 Node.s: Node.cpp.s
@@ -185,9 +215,39 @@ Node.s: Node.cpp.s
 
 # target to generate assembly for a file
 Node.cpp.s:
-	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lowestAncestor_run.dir/build.make src/CMakeFiles/lowestAncestor_run.dir/Node.cpp.s
-	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lowestAncestor_lib.dir/build.make src/CMakeFiles/lowestAncestor_lib.dir/Node.cpp.s
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/LCADAG_run.dir/build.make src/CMakeFiles/LCADAG_run.dir/Node.cpp.s
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/LCADAG_lib.dir/build.make src/CMakeFiles/LCADAG_lib.dir/Node.cpp.s
 .PHONY : Node.cpp.s
+
+graph.obj: graph.cpp.obj
+
+.PHONY : graph.obj
+
+# target to build an object file
+graph.cpp.obj:
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/LCADAG_run.dir/build.make src/CMakeFiles/LCADAG_run.dir/graph.cpp.obj
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/LCADAG_lib.dir/build.make src/CMakeFiles/LCADAG_lib.dir/graph.cpp.obj
+.PHONY : graph.cpp.obj
+
+graph.i: graph.cpp.i
+
+.PHONY : graph.i
+
+# target to preprocess a source file
+graph.cpp.i:
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/LCADAG_run.dir/build.make src/CMakeFiles/LCADAG_run.dir/graph.cpp.i
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/LCADAG_lib.dir/build.make src/CMakeFiles/LCADAG_lib.dir/graph.cpp.i
+.PHONY : graph.cpp.i
+
+graph.s: graph.cpp.s
+
+.PHONY : graph.s
+
+# target to generate assembly for a file
+graph.cpp.s:
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/LCADAG_run.dir/build.make src/CMakeFiles/LCADAG_run.dir/graph.cpp.s
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/LCADAG_lib.dir/build.make src/CMakeFiles/LCADAG_lib.dir/graph.cpp.s
+.PHONY : graph.cpp.s
 
 lowestAncestor.obj: lowestAncestor.cpp.obj
 
@@ -195,8 +255,8 @@ lowestAncestor.obj: lowestAncestor.cpp.obj
 
 # target to build an object file
 lowestAncestor.cpp.obj:
-	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lowestAncestor_run.dir/build.make src/CMakeFiles/lowestAncestor_run.dir/lowestAncestor.cpp.obj
-	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lowestAncestor_lib.dir/build.make src/CMakeFiles/lowestAncestor_lib.dir/lowestAncestor.cpp.obj
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/LCADAG_run.dir/build.make src/CMakeFiles/LCADAG_run.dir/lowestAncestor.cpp.obj
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/LCADAG_lib.dir/build.make src/CMakeFiles/LCADAG_lib.dir/lowestAncestor.cpp.obj
 .PHONY : lowestAncestor.cpp.obj
 
 lowestAncestor.i: lowestAncestor.cpp.i
@@ -205,8 +265,8 @@ lowestAncestor.i: lowestAncestor.cpp.i
 
 # target to preprocess a source file
 lowestAncestor.cpp.i:
-	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lowestAncestor_run.dir/build.make src/CMakeFiles/lowestAncestor_run.dir/lowestAncestor.cpp.i
-	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lowestAncestor_lib.dir/build.make src/CMakeFiles/lowestAncestor_lib.dir/lowestAncestor.cpp.i
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/LCADAG_run.dir/build.make src/CMakeFiles/LCADAG_run.dir/lowestAncestor.cpp.i
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/LCADAG_lib.dir/build.make src/CMakeFiles/LCADAG_lib.dir/lowestAncestor.cpp.i
 .PHONY : lowestAncestor.cpp.i
 
 lowestAncestor.s: lowestAncestor.cpp.s
@@ -215,8 +275,8 @@ lowestAncestor.s: lowestAncestor.cpp.s
 
 # target to generate assembly for a file
 lowestAncestor.cpp.s:
-	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lowestAncestor_run.dir/build.make src/CMakeFiles/lowestAncestor_run.dir/lowestAncestor.cpp.s
-	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lowestAncestor_lib.dir/build.make src/CMakeFiles/lowestAncestor_lib.dir/lowestAncestor.cpp.s
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/LCADAG_run.dir/build.make src/CMakeFiles/LCADAG_run.dir/lowestAncestor.cpp.s
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/LCADAG_lib.dir/build.make src/CMakeFiles/LCADAG_lib.dir/lowestAncestor.cpp.s
 .PHONY : lowestAncestor.cpp.s
 
 main.obj: main.cpp.obj
@@ -225,8 +285,8 @@ main.obj: main.cpp.obj
 
 # target to build an object file
 main.cpp.obj:
-	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lowestAncestor_run.dir/build.make src/CMakeFiles/lowestAncestor_run.dir/main.cpp.obj
-	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lowestAncestor_lib.dir/build.make src/CMakeFiles/lowestAncestor_lib.dir/main.cpp.obj
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/LCADAG_run.dir/build.make src/CMakeFiles/LCADAG_run.dir/main.cpp.obj
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/LCADAG_lib.dir/build.make src/CMakeFiles/LCADAG_lib.dir/main.cpp.obj
 .PHONY : main.cpp.obj
 
 main.i: main.cpp.i
@@ -235,8 +295,8 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lowestAncestor_run.dir/build.make src/CMakeFiles/lowestAncestor_run.dir/main.cpp.i
-	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lowestAncestor_lib.dir/build.make src/CMakeFiles/lowestAncestor_lib.dir/main.cpp.i
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/LCADAG_run.dir/build.make src/CMakeFiles/LCADAG_run.dir/main.cpp.i
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/LCADAG_lib.dir/build.make src/CMakeFiles/LCADAG_lib.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -245,8 +305,8 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lowestAncestor_run.dir/build.make src/CMakeFiles/lowestAncestor_run.dir/main.cpp.s
-	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/lowestAncestor_lib.dir/build.make src/CMakeFiles/lowestAncestor_lib.dir/main.cpp.s
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/LCADAG_run.dir/build.make src/CMakeFiles/LCADAG_run.dir/main.cpp.s
+	cd C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/LCADAG_lib.dir/build.make src/CMakeFiles/LCADAG_lib.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -257,11 +317,17 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... lowestAncestor_lib"
-	@echo "... lowestAncestor_run"
+	@echo "... LCADAG_lib"
+	@echo "... LCADAG_run"
+	@echo "... LCADAG.obj"
+	@echo "... LCADAG.i"
+	@echo "... LCADAG.s"
 	@echo "... Node.obj"
 	@echo "... Node.i"
 	@echo "... Node.s"
+	@echo "... graph.obj"
+	@echo "... graph.i"
+	@echo "... graph.s"
 	@echo "... lowestAncestor.obj"
 	@echo "... lowestAncestor.i"
 	@echo "... lowestAncestor.s"
