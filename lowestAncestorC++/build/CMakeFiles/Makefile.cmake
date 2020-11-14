@@ -60,9 +60,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "src/CMakeFiles/lowestAncestor_run.dir/DependInfo.cmake"
-  "src/CMakeFiles/lowestAncestor_lib.dir/DependInfo.cmake"
-  "tst/CMakeFiles/lowestAncestor_tst.dir/DependInfo.cmake"
+  "src/CMakeFiles/LCADAG_run.dir/DependInfo.cmake"
+  "src/CMakeFiles/LCADAG_lib.dir/DependInfo.cmake"
+  "tst/CMakeFiles/LCADAG_tst.dir/DependInfo.cmake"
   "lib/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
   "lib/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
   )

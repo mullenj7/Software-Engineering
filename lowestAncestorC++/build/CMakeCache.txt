@@ -154,7 +154,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=lowestAncestor
+CMAKE_PROJECT_NAME:STATIC=LCADAG
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=
@@ -250,6 +250,12 @@ CMAKE_STRIP:FILEPATH=C:/MinGW/bin/strip.exe
 // during the make.  This is useful for debugging only. With Visual
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=OFF
+
+//Value Computed by CMake
+LCADAG_BINARY_DIR:STATIC=C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++/build
+
+//Value Computed by CMake
+LCADAG_SOURCE_DIR:STATIC=C:/Users/jason/workspace/Software-Engineering/lowestAncestorC++
 
 //Path to a program.
 PYTHON_EXECUTABLE:FILEPATH=PYTHON_EXECUTABLE-NOTFOUND

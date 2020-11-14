@@ -38,7 +38,7 @@ TEST(Nodecpp , testConstructor){
 	EXPECT_EQ(10,root->key);
 }
 
-int main(int argc, char **argv) {
-    testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
-}
+//int main(int argc, char **argv) {
+    //testing::InitGoogleTest(&argc, argv);
+    //return RUN_ALL_TESTS();
+//}
