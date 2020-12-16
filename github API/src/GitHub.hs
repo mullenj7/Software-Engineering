@@ -3,6 +3,7 @@
 {-# LANGUAGE DeriveGeneric     #-}
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE TypeOperators     #-}
+{-# LANGUAGE DuplicateRecordFields     #-}
 
 module GitHub where 
 
@@ -18,18 +19,25 @@ import           Servant.Client
 type Username = Text
 type UserAgent = Text
 
+
 data GitHubUser =
-  GitHubUser { login :: Text
-             } deriving (Generic, FromJSON, Show)
+  GitHubUser { login :: Text,url :: Text
+              } deriving (Generic, FromJSON, Show)
+data UserRepo =
+  UserRepo { name :: Text,created_at :: Text,updated_at :: Maybe Text
+           } deriving (Generic, FromJSON, Show)
+            
 
 type GitHubAPI = "users" :> Header "user-agent" UserAgent 
                          :> Capture "username" Username  :> Get '[JSON] GitHubUser
-            :<|> "test2" :> Get '[JSON] Text
+           :<|> "users" :> Header  "user-agent" UserAgent 
+                         :> Capture "username" Username  :> "repos" :>  Get '[JSON] [UserRepo]
 
 gitHubAPI :: Proxy GitHubAPI
 gitHubAPI = Proxy
 
-test :: Maybe UserAgent -> Username -> ClientM GitHubUser
-test2 :: ClientM Text
+displayUserDetails :: Maybe UserAgent -> Username -> ClientM GitHubUser {-should display user login and url-}
+displayUserRepos :: Maybe UserAgent -> Username -> ClientM [UserRepo] {-should display list of repos and their creation date
+																			+ latest update if applicable-}
 
-test :<|> test2 = client gitHubAPI
+displayUserDetails :<|> displayUserRepos = client gitHubAPI
