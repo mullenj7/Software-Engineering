@@ -22,11 +22,14 @@ import           Network.HTTP.Client.TLS      (tlsManagerSettings)
 import Data.Text hiding (map,intercalate, groupBy, concat)
 import Data.List (intercalate, groupBy, sortBy)
 import Data.Either
+import System.Environment           (getArgs)
+
 
 someFunc :: IO ()
 someFunc = do
-  testGitHubCall "mullenj7"
-  putStrLn "end."
+   (userName:_) <- getArgs
+   testGitHubCall $ pack userName
+
 
 
 testGitHubCall :: Text -> IO ()
