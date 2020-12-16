@@ -7,18 +7,18 @@ C:\Users\jason\workspace\Software-Engineering\github API\ChangeLog.md:
   size: 0
   modtime: 1608077102
 C:\Users\jason\workspace\Software-Engineering\github API\src\Lib.hs:
-  hash: 87a2af8e1033937255e5dc31983a84a5067895aa29b89f27b61afc84ea6ba2b7
-  size: 1952
-  modtime: 1608158523
+  hash: adfc0fabc06900efa8cd13008b07c348b9b540fd1cce2538fa2a24b265340397
+  size: 2116
+  modtime: 1608160989
 C:\Users\jason\workspace\Software-Engineering\github API\package.yaml:
-  hash: deb0d9f13cabe651c7345f1e1fca4b4df455a9ec08c325714e7d0c45acee5829
-  size: 1326
-  modtime: 1608077102
+  hash: 2a86df30940786f00d0209ff1eb321d04b9682f2a1217fec6188c4a419b2df7d
+  size: 1345
+  modtime: 1608160483
 C:\Users\jason\workspace\Software-Engineering\github API\src\GitHub.hs:
-  hash: a83f125beb8cb457621ce01dbd24882218acee7bd9c5e672e67ec5e5120bb4c3
-  size: 1573
-  modtime: 1608084601
+  hash: 7df6ae53a5164fefaa6f16eccb2bd40f41fc573936b950f92c17794884d7dad0
+  size: 1740
+  modtime: 1608160341
 C:\Users\jason\workspace\Software-Engineering\github API\githubAPI.cabal:
-  hash: d4566681708290952b95f21cec45c8efa971f14b2abeff237521bbc8fb9cc081
-  size: 1875
-  modtime: 1608077102
+  hash: 0c073e5ddf2aeb9c610bf1d1fb1bfdc0cd6d62b71f76b5b860071b49aaf34c60
+  size: 1850
+  modtime: 1608160497

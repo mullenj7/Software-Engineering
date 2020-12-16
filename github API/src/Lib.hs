@@ -17,32 +17,36 @@ module Lib
 
 import qualified GitHub as GH
 import qualified Servant.Client               as SC
-import           Network.HTTP.Client          (newManager)
-import           Network.HTTP.Client.TLS      (tlsManagerSettings)
+import Network.HTTP.Client (newManager)
+import Network.HTTP.Client.TLS (tlsManagerSettings)
 import Data.Text hiding (map,intercalate, groupBy, concat)
 import Data.List (intercalate, groupBy, sortBy)
 import Data.Either
-import System.Environment           (getArgs)
-
+import System.Environment (getArgs)
+import Servant.API (BasicAuthData (..))
+import Data.ByteString.UTF8 (fromString)
 
 someFunc :: IO ()
 someFunc = do
-   (userName:_) <- getArgs
-   testGitHubCall $ pack userName
+   (userName:uname:token:_) <- getArgs
+   
+   let auth = BasicAuthData (fromString uname) (fromString token)
+   
+   testGitHubCall auth $ pack userName
 
 
 
-testGitHubCall :: Text -> IO ()
-testGitHubCall name = 
-  (SC.runClientM (GH.displayUserDetails (Just "haskell-app") name) =<< env) >>= \case
+testGitHubCall :: BasicAuthData ->Text -> IO ()
+testGitHubCall auth name = 
+  (SC.runClientM (GH.displayUserDetails (Just "haskell-app") auth name) =<< env) >>= \case
 
-   Left err -> do
+    Left err -> do
       putStrLn $ "Error displaying user details" ++ show err
-   Right res -> do
+    Right res -> do
       putStrLn $ "User details are: " ++ show res
       
       -- now lets get the users repositories
-      (SC.runClientM (GH.displayUserRepos (Just "haskell-app") name) =<< env) >>= \case
+      (SC.runClientM (GH.displayUserRepos (Just "haskell-app") auth name) =<< env) >>= \case
         Left err -> do
           putStrLn $ "Error displaying repo details" ++ show err
         Right repos -> do

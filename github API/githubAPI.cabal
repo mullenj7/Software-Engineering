@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 4eff86a9b8471677afa1c9e95d990c22bcc8f7d0ee67d34f83e99f3e792b0ace
+-- hash: fc7bd2ba69504ea127d9dbe090bde69bd38a5d722dcbe410fd49bc82dfb4f0f1
 
 name:           githubAPI
 version:        0.1.0.0
@@ -40,6 +40,7 @@ library
     , servant
     , servant-client
     , text
+    , utf8-string
   default-language: Haskell2010
 
 executable githubAPI-exe
@@ -58,6 +59,7 @@ executable githubAPI-exe
     , servant
     , servant-client
     , text
+    , utf8-string
   default-language: Haskell2010
 
 test-suite githubAPI-test
@@ -77,4 +79,5 @@ test-suite githubAPI-test
     , servant
     , servant-client
     , text
+    , utf8-string
   default-language: Haskell2010

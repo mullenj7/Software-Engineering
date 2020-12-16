@@ -88,6 +88,17 @@
   (major1) == 1 && (major2) == 2 && (minor) <= 4)
 #endif /* MIN_VERSION_text */
 
+/* package utf8-string-1.0.1.1 */
+#ifndef VERSION_utf8_string
+#define VERSION_utf8_string "1.0.1.1"
+#endif /* VERSION_utf8_string */
+#ifndef MIN_VERSION_utf8_string
+#define MIN_VERSION_utf8_string(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  0 || \
+  (major1) == 1 && (major2) == 0 && (minor) <= 1)
+#endif /* MIN_VERSION_utf8_string */
+
 /* tool gcc-7.2.0 */
 #ifndef TOOL_VERSION_gcc
 #define TOOL_VERSION_gcc "7.2.0"
@@ -177,10 +188,10 @@
 #endif /* MIN_TOOL_VERSION_strip */
 
 #ifndef CURRENT_PACKAGE_KEY
-#define CURRENT_PACKAGE_KEY "githubAPI-0.1.0.0-87rdZNpjE5mvaduKB5jVL"
+#define CURRENT_PACKAGE_KEY "githubAPI-0.1.0.0-DnHnUYz7X0e5gsGQyt6vPl"
 #endif /* CURRENT_PACKAGE_KEY */
 #ifndef CURRENT_COMPONENT_ID
-#define CURRENT_COMPONENT_ID "githubAPI-0.1.0.0-87rdZNpjE5mvaduKB5jVL"
+#define CURRENT_COMPONENT_ID "githubAPI-0.1.0.0-DnHnUYz7X0e5gsGQyt6vPl"
 #endif /* CURRENT_COMPONENT_ID */
 #ifndef CURRENT_PACKAGE_VERSION
 #define CURRENT_PACKAGE_VERSION "0.1.0.0"

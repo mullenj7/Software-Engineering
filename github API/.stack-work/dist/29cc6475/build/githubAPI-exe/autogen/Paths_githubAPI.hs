@@ -30,7 +30,7 @@ version = Version [0,1,0,0] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
 bindir     = "C:\\Users\\jason\\workspace\\Software-Engineering\\github API\\.stack-work\\install\\52080d55\\bin"
-libdir     = "C:\\Users\\jason\\workspace\\Software-Engineering\\github API\\.stack-work\\install\\52080d55\\lib\\x86_64-windows-ghc-8.8.4\\githubAPI-0.1.0.0-7UEFoteQ7sP4rwDESRnIqR-githubAPI-exe"
+libdir     = "C:\\Users\\jason\\workspace\\Software-Engineering\\github API\\.stack-work\\install\\52080d55\\lib\\x86_64-windows-ghc-8.8.4\\githubAPI-0.1.0.0-I5XCPdZ7Qde1Tx56DIVELM-githubAPI-exe"
 dynlibdir  = "C:\\Users\\jason\\workspace\\Software-Engineering\\github API\\.stack-work\\install\\52080d55\\lib\\x86_64-windows-ghc-8.8.4"
 datadir    = "C:\\Users\\jason\\workspace\\Software-Engineering\\github API\\.stack-work\\install\\52080d55\\share\\x86_64-windows-ghc-8.8.4\\githubAPI-0.1.0.0"
 libexecdir = "C:\\Users\\jason\\workspace\\Software-Engineering\\github API\\.stack-work\\install\\52080d55\\libexec\\x86_64-windows-ghc-8.8.4\\githubAPI-0.1.0.0"

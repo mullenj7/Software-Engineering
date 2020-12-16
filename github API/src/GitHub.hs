@@ -1,4 +1,5 @@
 {-# LANGUAGE DataKinds         #-}
+{-# LANGUAGE DataKinds         #-}
 {-# LANGUAGE DeriveAnyClass    #-}
 {-# LANGUAGE DeriveGeneric     #-}
 {-# LANGUAGE OverloadedStrings #-}
@@ -28,16 +29,16 @@ data UserRepo =
            } deriving (Generic, FromJSON, Show)
             
 
-type GitHubAPI = "users" :> Header "user-agent" UserAgent 
+type GitHubAPI = "users" :> Header "user-agent" UserAgent
+                         :> BasicAuth "github" Int 
                          :> Capture "username" Username  :> Get '[JSON] GitHubUser
            :<|> "users" :> Header  "user-agent" UserAgent 
+                         :> BasicAuth "github" Int 
                          :> Capture "username" Username  :> "repos" :>  Get '[JSON] [UserRepo]
 
 gitHubAPI :: Proxy GitHubAPI
 gitHubAPI = Proxy
 
-displayUserDetails :: Maybe UserAgent -> Username -> ClientM GitHubUser {-should display user login and url-}
-displayUserRepos :: Maybe UserAgent -> Username -> ClientM [UserRepo] {-should display list of repos and their creation date
-																			+ latest update if applicable-}
-
+displayUserDetails :: Maybe UserAgent -> BasicAuthData -> Username -> ClientM GitHubUser {-should display user login and url-}
+displayUserRepos :: Maybe UserAgent -> BasicAuthData -> Username -> ClientM [UserRepo] {-should display list of repos and their creation date															+ latest update if applicable-}
 displayUserDetails :<|> displayUserRepos = client gitHubAPI
