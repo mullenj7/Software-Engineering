@@ -17,49 +17,43 @@ module Lib
 
 import qualified GitHub as GH
 import qualified Servant.Client               as SC
-import Network.HTTP.Client (newManager)
-import Network.HTTP.Client.TLS (tlsManagerSettings)
+import           Network.HTTP.Client          (newManager)
+import           Network.HTTP.Client.TLS      (tlsManagerSettings)
+import           System.Environment           (getArgs)
 import Data.Text hiding (map,intercalate, groupBy, concat)
 import Data.List (intercalate, groupBy, sortBy)
 import Data.Either
-import System.Environment (getArgs)
-import Servant.API (BasicAuthData (..))
+import           Servant.API                (BasicAuthData (..))
 import Data.ByteString.UTF8 (fromString)
 
 someFunc :: IO ()
 someFunc = do
-   (userName:uname:token:_) <- getArgs
+   (rName:user:token:_) <- getArgs
    
-   let auth = BasicAuthData (fromString uname) (fromString token)
+   let auth = BasicAuthData (fromString user) (fromString token)
    
-   testGitHubCall auth $ pack userName
+   testGitHubCall auth $ pack rName
 
 
 
 testGitHubCall :: BasicAuthData ->Text -> IO ()
 testGitHubCall auth name = 
-  (SC.runClientM (GH.displayUserDetails (Just "haskell-app") auth name) =<< env) >>= \case
+  (SC.runClientM (GH.displayUserDetails (Just "haskell-app") auth name) =<< env) >>= \case --displays user details
 
     Left err -> do
       putStrLn $ "Error displaying user details" ++ show err
     Right res -> do
       putStrLn $ "User details are: " ++ show res
       
-      -- now lets get the users repositories
-      (SC.runClientM (GH.displayUserRepos (Just "haskell-app") auth name) =<< env) >>= \case
+      (SC.runClientM (GH.displayUserRepos (Just "haskell-app") auth name) =<< env) >>= \case --displays user repo details
         Left err -> do
           putStrLn $ "Error displaying repo details" ++ show err
         Right repos -> do
-          putStrLn $ "User repo details are: " ++
-            intercalate ", " (map (\(GH.UserRepo n created_at updated_at ) -> unpack created_at) repos)
-		
-
+          putStrLn $ "User repo details are: " ++ show repos
  
               
   where env :: IO SC.ClientEnv
         env = do
           manager <- newManager tlsManagerSettings
           return $ SC.mkClientEnv manager (SC.BaseUrl SC.Http "api.github.com" 80 "")
-
-      
-         
+					

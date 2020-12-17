@@ -29,7 +29,6 @@ dependencies:
   - http-client-tls
   - utf8-string
 
-
 library:
   source-dirs: src
 
