@@ -1,24 +1,16 @@
 [{
-    "name": "Bill",
-    "commits": 9
-},
-{
-    "name": "Ben",
+    "name": "Software Engineering",
     "commits": 20
 },
 {
-    "name": "John",
-    "commits": 30
+    "name": "Sweng",
+    "commits": 142
+},
+{
+    "name": "Algo",
+    "commits": 7
 }, 
 {
-     "name": "Jane",
-     "commits": 8
-},
-{
-     "name": "Tim",
-     "commits": 12
-},
-{
-     "name": "Sam",
-     "commits": 20
+     "name": "Jason-s Repository",
+     "commits": 2
 }]
